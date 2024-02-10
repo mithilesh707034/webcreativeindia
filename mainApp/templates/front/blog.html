@@ -1,0 +1,54 @@
+{%extends 'front/about.html'%}
+{%load static %}
+{%block body%}
+
+	<section id="title_breadcrumbs_bar" class="bokah_enabled cap"
+		style="background-image: url({%static 'assets/images/c1.jpg'%})">
+		<div class="container">
+			<div class="title-text cap">
+				<h2 class="text-decor">Blog</h2>
+			</div>
+			<div class="tbb_breadcrumbs cap">
+				<div class="breadcrumbs">
+					<div class="breadcrumbs_inner"><a href="/">Home</a> / <span class="current">Blog</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section" id="section1">
+		<div class="innerbx">
+			<div class="content-wrapper">
+				<div style="width:100%; margin:auto;">
+					<div class="row">
+						<div class="who-we">
+							<div class="container">
+								<div class="col-md-12 page-content withoutpad">
+									{%for item in data%}
+									<div class="col-md-4 blog-item">
+										<div class="blog-box">
+											<div class="imgTitle"
+												style="background-image:url({{item.image.url}})">
+											</div>
+											<h4 class="blogTitle">{{item.title}}</h4>
+											<p><br></p>
+											<p><a href="/blog-details/{{item.title|slugify}}-{{item.id}}"
+													class="btn btn-2 btn-1e ">Learn More</a> </p>
+										</div>
+									</div>
+									{%endfor%}
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{%endblock%}
+
+</body>
+</html>

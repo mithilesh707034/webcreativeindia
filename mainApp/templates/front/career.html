@@ -1,0 +1,90 @@
+{%extends 'front/about.html'%}
+{%load static%}
+{%block body%}
+
+<section id="title_breadcrumbs_bar" class="bokah_enabled cap"
+	style="background-image:url({%static 'assets/media/gallery/691153765_Untitled_design-4.png'%})">
+	<div class="container">
+		<div class="title-text cap">
+			<h2 class="text-decor">Gallery</h2>
+		</div>
+		<div class="tbb_breadcrumbs cap">
+			<div class="breadcrumbs">
+				<div class="breadcrumbs_inner"><a href="/">Home</a> / <span class="current">Gallery</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="sectionGal">
+	<div class="innerbx">
+		<div class="portfolio_area portfolio_gutter">
+			<div class="container">
+				<div class="row gallery-bx">
+					<ul class="nav nav-tabs">
+						<li><a data-toggle="tab" href="#all">All</a></li>
+						<li><a data-toggle="tab" href="#advertise">Advertise</a></li>
+					</ul>
+
+					<div class="tab-content">
+						<div id="all" class="tab-pane fade">
+							<div class="col-lg-3 col-md-3 col-xs-6 thumb">
+								<div class="gallery-block">
+									<a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+										data-title="Advertise with us">
+										<img class="img-thumbnail"
+											src="{%static 'assets/media/gallery/691153765_Untitled_design-4.png'%}">
+									</a>
+									<h4 class="gallery-title">Advertise with us</h4>
+								</div>
+							</div>
+						</div>
+
+						<div id="advertise" class="tab-pane fade">
+							<div class="col-lg-3 col-md-3 col-xs-6 thumb">
+								<div class="gallery-block">
+									<a class="thumbnail" href="#" data-image-id="" data-toggle="modal"
+										data-title="Advertise with us">
+										<img class="img-thumbnail"
+											src="{%static 'assets/media/gallery/691153765_Untitled_design-4.png'%}">
+									</a>
+									<h4 class="gallery-title">Advertise with us</h4>
+								</div>
+							</div>
+						</div>
+						<!-- /.team-img -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+	aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="image-gallery-title"></h4>
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+						class="sr-only">Close</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<img id="image-gallery-image" class="img-responsive col-md-12" src="#">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary float-left" id="show-previous-image"><i
+						class="fa fa-arrow-left"></i>
+				</button>
+				<button type="button" id="show-next-image" class="btn btn-secondary float-right"><i
+						class="fa fa-arrow-right"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+{%endblock%}

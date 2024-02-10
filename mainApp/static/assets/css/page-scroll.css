@@ -1,0 +1,57 @@
+/* CSS Document */
+
+/********page scroll section************/
+
+.scroll-target {
+  position: relative;
+/*  height: 600px;  fallback for browsers that don't support the vh unit */
+  height: 100vh;
+  background: url(../images/about-bg.jpg) fixed;
+}
+.scroll-target .innerbx {
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.scroll-target:nth-child(1) .innerbx { top: 38%;}
+.scroll-target:nth-child(2) .innerbx { top: 38%;}
+.scroll-target:nth-child(3) .innerbx { top: 45%;}
+.scroll-target:nth-child(4) .innerbx { top: 40%;}
+.scroll-target:nth-child(5) .innerbx { top: 48%;}
+.scroll-target:nth-child(6) .innerbx { top: 48%;}
+.scroll-target:nth-child(7) .innerbx { top: 48%;}
+
+
+@media (min-width: 768px) {
+  .scroll-target .innerbx {
+    padding: 0;
+  }
+} /* end media query */
+
+
+.scroll-target:nth-of-type(2n+1) .bg-text {
+  color: #d3f2ee;
+}
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 75px;
+    right: 26px;
+    padding: 7px;
+    background: #333;
+    border-bottom: none;
+    border-radius: 50%;
+    font-size: 26px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+}

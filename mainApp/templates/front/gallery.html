@@ -1,0 +1,44 @@
+{%extends 'front/about.html'%}
+{%load static%}
+{%block body%}
+
+<section id="title_breadcrumbs_bar" class="bokah_enabled cap"
+	style="background-image:url({%static 'assets/media/gallery/691153765_Untitled_design-4.png'%})">
+	<div class="container">
+		<div class="title-text cap">
+			<h2 class="text-decor">Gallery</h2>
+		</div>
+		<div class="tbb_breadcrumbs cap">
+			<div class="breadcrumbs">
+				<div class="breadcrumbs_inner"><a href="/">Home</a> / <span class="current">Gallery</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" id="sectionGal">
+	<div class="innerbx">
+		<div class="portfolio_area portfolio_gutter">
+			<div class="container">
+				<div class="row gallery-bx">
+					{%for item in data%}
+							<div class="col-lg-3 col-md-3 col-xs-6 thumb">
+								<div class="gallery-block">
+									<a class="thumbnail" href="{{item.image.url}}" data-image-id="" data-toggle="modal"
+										data-title="Advertise with us">
+										<img class="img-thumbnail"
+											src="{{item.image.url}}">
+									</a>
+									<h4 class="gallery-title">{{item.name}}</h4>
+								</div>
+							</div>
+							{%endfor%}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{%endblock%}

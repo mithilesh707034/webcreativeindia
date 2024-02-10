@@ -1,0 +1,53 @@
+{%extends 'front/about.html'%}
+{%load static%}
+{%block body%}
+<script>
+	function togglePasswordVisibility() {
+		var passwordInput = document.getElementById("password");
+		var icon = document.querySelector(".field-icon");
+		if (passwordInput.type === "password") {
+			passwordInput.type = "text";
+			icon.classList.remove("fa-eye");
+			icon.classList.add("fa-eye-slash");
+		} else {
+			passwordInput.type = "password";
+			icon.classList.remove("fa-eye-slash");
+			icon.classList.add("fa-eye");
+		}
+	}
+	</script>
+{%if msg%}
+<script>
+   alert("Invalid Username and Password!")
+</script>
+{%endif%}
+<section class="section" id="sectionGal">
+	<div data-animate="fadeInUp" class="fadeInUp animated row">
+		<div class=" text-center" style="background-color:#0a4b6b;border-radius:20px;width:400px;margin:auto">
+		   <div class=" contact-form "style="width:380px;padding:10px" >
+			  <h2>Client Login </h2>
+			  <p>Welcome Back!</p>
+			  
+			  <form  method="post">
+				 {%csrf_token%}
+				 
+				 <div class="form-group">
+					<input type="text" class="form-control" name="username"  placeholder="Username*" required value="{{u}}">
+				 </div>
+				 <div class="form-group">
+					<input type="password" class="form-control" name="password"  placeholder="Password* "required value="{{p}}" id="password"> 
+					<span style="position:absolute;margin-top:-30px;margin-left:130px;color:white;font-size:20px" class="fa fa-eye field-icon toggle-password" onclick="togglePasswordVisibility()"></span>
+
+				 </div>
+				 
+				 <div class="form-group">
+					<button  class="btn btn-2"  type="submit">Login</button>
+				 </div>
+			  </form>
+			  
+		   </div>
+		</div>
+	 </div>
+</section>
+
+{%endblock%}

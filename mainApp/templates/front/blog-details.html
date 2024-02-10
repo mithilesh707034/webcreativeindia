@@ -1,0 +1,26 @@
+{%extends 'front/about.html'%}
+{%load static %}
+{%block body%}
+
+	<section class="section" id="section1">
+		<div class="innerbx">
+			<div class="content-wrapper">
+				<div style="width:100%; margin:auto;">
+					<div class="row">
+						<div class="who-we">
+							<div class="container text-center">
+								<div class="col-md-12 page-content withoutpad">
+								<h2 >{{data.title}}</h2>
+								<img src="{{data.image.url}}">
+								{{data.description|safe}}
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{%endblock%}
+</body>
+</html>

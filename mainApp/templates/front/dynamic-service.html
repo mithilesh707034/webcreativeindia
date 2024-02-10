@@ -1,0 +1,158 @@
+{%extends 'front/about.html'%}
+{%load static %}
+{%block title%}{{title}} in {{location}} {%endblock%}
+{%block body%}
+
+<style>
+  h3,
+  h3 {
+    color: rgb(255, 156, 0) !important;
+  }
+  .sk{
+    color:rgb(255, 156, 0) !important;
+  }
+  .sk:hover{
+    color:white !important;
+  }
+</style>
+<section id="title_breadcrumbs_bar" class="bokah_enabled cap"
+  style="background-image:url({%static 'assets/media/banner/1383871950_Influencer_Marketing_Deck.jpg'%})">
+  <div class="container">
+    <div class="title-text cap">
+      <h2 class="text-decor" id="originalText"> {{title}} in {{location}}
+      </h2>
+    </div>
+    <div class="tbb_breadcrumbs cap">
+      <div class="breadcrumbs">
+        </span>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="section" id="section1">
+  <div class="innerbx">
+    <div class="content-wrapper">
+      <div style="width:100%; margin:auto;">
+        <div class="row">
+          <div class="who-we">
+            <div class="container">
+
+              <div class="col-md-12 page-content text-justify">
+                <div class="col-md-12 text-center">
+
+
+                  <script>
+                    // Get the text content
+                    var originalText = document.getElementById("originalText").textContent;
+
+                    // Replace "-" with space
+                    var replacedText = originalText.replace(/-/g, ' ');
+
+                    // Update the paragraph with replaced text
+                    document.getElementById("originalText").textContent = replacedText;
+                  </script>
+                  <h3> Welcome to Web Creative Solution Private Limited,</h3>
+                  <p>your premier destination for top-notch digital solutions in Noida and beyond! As the leading
+                    provider of digital services, we take pride in offering a comprehensive range of services to cater
+                    to your every need.</p>
+
+                  <h3>Why Choose Us?</h3>
+                  <p>At Web Creative Solution Private Limited, we don't just meet expectations; we exceed them. Here's
+                    why we're your best choice for all things digital:
+                    <br>
+                    Expertise: With years of industry experience under our belt, our team of seasoned professionals
+                    possesses the expertise and skillset to deliver exceptional results, every time.
+                    <br>
+                    Innovation: We stay ahead of the curve by leveraging the latest technologies and trends in the
+                    digital landscape, ensuring that your projects are always at the forefront of innovation.
+                    <br>
+                    Customization: We understand that every business is unique. That's why we offer tailored solutions
+                    designed to meet your specific requirements and objectives.
+                    <br>
+                    Customer Satisfaction: Your satisfaction is our top priority. We go above and beyond to ensure that
+                    our clients are delighted with the results we deliver, maintaining open communication every step of
+                    the way.
+                    <br>
+                  <h3>Our Comprehensive Services:</h3>
+
+                  <h3>App Development:</h3>
+                  <p>From concept to deployment, our expert team will bring your app ideas to life, delivering seamless
+                    and intuitive mobile experiences.
+                    Web Development: Whether you need a sleek corporate website or a robust e-commerce platform, we have
+                    the expertise to create websites that drive results.
+                    SEO (Search Engine Optimization): Dominate the search engine rankings and increase your online
+                    visibility with our result-driven SEO strategies.
+                    Content Writing: Engage your audience and enhance your brand presence with high-quality,
+                    SEO-friendly content crafted by our talented writers.
+                    Billing Software: Streamline your billing process and manage your finances with ease using our
+                    customizable billing software solutions.
+                    Custom Website & App Development: Our bespoke development services ensure that your digital presence
+                    is unique and tailored to your specific needs.
+
+
+
+                  <h3>Web Designing & Development:</h3>
+                  <p> Our expert team specializes in creating visually appealing, user-friendly websites that are
+                    optimized for performance and functionality. Whether you need a simple informational site or a
+                    complex e-commerce platform, we have the skills and creativity to bring your vision to life.</p>
+
+                  <h3>Social Media Marketing & Management: </h3>
+                  <p>Engage your audience and build brand awareness with our comprehensive social media marketing and
+                    management services. We create tailored strategies for each platform, leveraging the power of social
+                    media to drive traffic, generate leads, and increase conversions.</p>
+
+                  <h3>SEO & SEM: </h3>
+                  <p>Increase your online visibility and drive targeted traffic to your website with our proven SEO and
+                    SEM strategies. From keyword research to on-page optimization and link building, we optimize your
+                    website to rank higher in search engine results pages and attract qualified leads.</p>
+
+                  <h3>Digital PR & ORM: </h3>
+                  <p>Protect and enhance your online reputation with our digital PR and online reputation management
+                    services. We monitor your brand's online presence, respond to customer feedback, and proactively
+                    manage your reputation to ensure that your brand maintains a positive image.</p>
+
+                  <h3>Content Writing: </h3>
+                  <p>Captivate your audience and drive engagement with high-quality, SEO-friendly content crafted by our
+                    talented writers. From blog posts and articles to website copy and social media content, we create
+                    compelling content that resonates with your target audience and showcases your brand's unique voice.
+                  </p>
+
+                  <h3>Influencer Marketing: </h3>
+                  <p>Amplify your brand's reach and connect with your target audience through influencer marketing. We
+                    identify and partner with influencers who align with your brand values and target demographics,
+                    creating authentic content that drives engagement and builds brand loyalty.</p>
+
+                  <h3>Why Settle for Less?</h3>
+                  <p>Don't settle for mediocre digital solutions when you can partner with the best. Join hands with Web
+                    Creative Solution Private Limited and experience the difference firsthand.</p>
+
+                  <h3>Contact Us Today!</h3>
+                  <p>
+                    Ready to take your digital presence to new heights? Get in touch with us today to discuss your
+                    project requirements. Call us at +91 9999127533 or drop us an email at info@webcreativesolution.in.
+                    You can also visit us at our conveniently located office at D-22,Sector-3, in Noida, Uttar Pradesh
+                    201301.
+                    <br>
+                    Elevate your digital presence with Web Creative Solution Private Limited - Your Partner in Success!
+                  </p>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section style="padding:20px">
+  <h4>Most Searched Keywords</h4>
+  {%for s in ser %}
+  {%for l in loc%}
+  <a class="sk" href="/{{l.name|slugify}}/{{s.name|slugify}}">{{s.name}} in {{l.name}}</a>, &nbsp;
+  {%endfor%}
+  {%endfor%}
+</section>
+{%endblock%}
